@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+  
+.navBar {
+    width: 15%;
+    background-image: linear-gradient(#041843, #214083);
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .navBar #logo {
+    width: 80%;
+    border-radius: 10%;
+    margin: 10px auto 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navBar #logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .navBar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    text-align: left;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navBar a i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .navBar a:hover {
+    background-color: #1355a0;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.container {
+    margin-left: 18%;
+    padding: 30px 20px;
+    width: 82%;
+    box-sizing: border-box;
+}
+  
+.cabecalho h2 {
+    color: #333;
+    font-weight: bold;
+}
+  
+.lista-produtos {
+    overflow-x: auto;
+}
+  
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.tabela thead {
+    background-color: #214083;
+    color: white;
+}
+  
+.tabela th, .tabela td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+  
+.tabela tbody tr:hover {
+    background-color: #f0f0f0;
+}
+  
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #041843, #214083);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 25px; 
+    font-size: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+button.editar {
+    background-color: #77b88d;
+    color: white;
+}
+
+button.editar:hover {
+    background-color: #65a579;
+    transform: scale(1.05); 
+}
+
+button.remover {
+    background-color: #f6a9a3; 
+    color: white;
+}
+
+button.remover:hover {
+    background-color: #e58f8a; 
+    transform: scale(1.05); 
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+/* Novos estilos para o Modal e componentes de estoque */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 15px;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.3s;
+}
+  
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+  
+.close {
+    color: #214083;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #041843;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+  
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+  
+.form-control:focus {
+    outline: none;
+    border-color: #214083;
+}
+  
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+  
+.btn-primary {
+    background-color: #214083;
+    color: white;
+}
+  
+.btn-primary:hover {
+    background-color: #1355a0;
+    transform: scale(1.05);
+}
+  
+.btn-estoque {
+    background-color: #77b88d;
+    color: white;
+}
+  
+.btn-estoque:hover {
+    background-color: #65a579;
+    transform: scale(1.05);
+}
+
+#loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}

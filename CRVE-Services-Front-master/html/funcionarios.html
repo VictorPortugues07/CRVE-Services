@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciar Funcionários</title>
+  <link rel="stylesheet" href="../css/produtos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <div class="navBar">
+    <img src="../imagens/Logo.png" id="logo">
+    <a href="../html/pagina-inicial.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="../html/produtos.html"><i class="fa-solid fa-box"></i> Produtos</a>
+    <a href="funcionarios.html"><i class="fa-solid fa-address-card"></i> Funcionários</a>
+    <a href="perfil.html"><i class="fa-solid fa-user"></i> Perfil</a>
+    <a href="../html/servicos.html"><i class="fa-solid fa-taxi"></i> Serviços</a> 
+    <a href="../html/estoque.html"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a>
+    <a href="../html/login.html"><i class="fa-solid fa-circle-xmark"></i> Logout</a>
+  </div>
+
+  <main class="container">
+    <section class="cabecalho">
+      <h2>Gerenciamento de Funcionários</h2>
+      <div id="mensagens"></div>
+      <div class="form-produto">
+        <input type="text" id="nomeFuncionario" placeholder="Nome" />
+        <input type="email" id="emailFuncionario" placeholder="Email" />
+        <input type="password" id="senhaFuncionario" placeholder="Senha" />
+        <input type="password" id="confirmarSenhaFuncionario" placeholder="Confirmar Senha" />
+        <button id="adicionarFuncionario">Adicionar Funcionário</button>
+      </div>
+    </section>
+
+    <section class="lista-produtos">
+      <div id="loading">
+        <i class="fa-solid fa-spinner fa-spin"></i> Carregando funcionários...
+      </div>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaFuncionarios">
+          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2025 Tech Digital Solutions. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../javascript/auth.js"></script>
+  <script src="../javascript/funcionarios.js"></script>
+</body>
+</html>

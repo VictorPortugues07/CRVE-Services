@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.navBar {
+  width: 15%;
+  background-image: linear-gradient(#041843, #214083);
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.navBar #logo {
+  width: 80%;
+  border-radius: 10%;
+  margin: 10px auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.navBar #logo:hover {
+  transform: scale(1.05);
+}
+
+.navBar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  text-align: left;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navBar a i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.navBar a:hover {
+  background-color: #1355a0;
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.containerPerfil {
+  position: absolute;
+  left: 15%;
+  width: 85%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  min-height: calc(100vh - 60px);
+}
+
+.imagemPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.imagemPerfil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #214083;
+  transition: transform 0.3s;
+}
+
+.imagemPerfil img:hover {
+  transform: scale(1.05);
+}
+
+.botoesAcoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.dadosUsuario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  width: 100%;
+  align-items: center;
+}
+
+.dadosUsuario label {
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.dadosUsuario input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.btn {
+  background-color: #214083;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #1355a0;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+.rodape {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #041843, #214083);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.containerGeral {
+  display: flex;
+  margin-left: 17%;
+  padding: 30px 20px;
+  gap: 25px;
+  box-sizing: border-box;
+  width: calc(100% - 17%);
+}
+
+.perfilUsuario {
+  width: 30%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.separador {
+  width: 3px;
+  background-color: #ccc;
+  height: auto;
+}
+
+.containerServicos {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.containerServicos h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #214083;
+  margin-bottom: 10px;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.form-control {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #214083;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #214083;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1355a0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table th, .table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.table thead {
+  background-color: #214083;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .containerGeral {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .perfilUsuario {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .containerServicos {
+    width: 100%;
+  }
+
+  .navBar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
